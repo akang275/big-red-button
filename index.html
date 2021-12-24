@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<meta charset="utf-8">
+	<title>Button</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="button">
+			<div class="middle"></div>
+			<div class="bottom"></div>
+			<div class="top"></div>
+		</div>
+	</div>
+
+	<script>
+		function playAudio() {
+			let audio = new Audio();
+			audio.src = 'vineboom.mp3';
+			audio.play();
+		}
+
+		let button = document.getElementsByClassName('button')[0];
+		let middle = document.getElementsByClassName('middle')[0];
+		let bottom = document.getElementsByClassName('bottom')[0];
+		let top_ = document.getElementsByClassName('top')[0];
+		
+		let counter = 0;
+
+		button.onclick = function() {
+			counter += 1;
+			let id = counter;
+			middle.style.visibility = 'hidden';
+			top_.style.marginBottom = '-50px';
+			playAudio();
+
+			let timer = setTimeout(function() {
+				if (id === counter) {
+					middle.style.visibility = 'visible';
+					top_.style.marginBottom = '50px';
+				}
+			}, 400);
+		}
+	</script>
+</body>
+
+</html>

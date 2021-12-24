@@ -19,9 +19,9 @@ body {
 .button {
 	position:relative;
 	display: flex;
-	align-items: center;
+	align-items: end;
 	justify-content: center;
-	border: solid;
+
 }
 
 .button .top{
@@ -30,7 +30,9 @@ body {
 	border-radius: 50%;
 	background: #F47B7C;
 	position: absolute;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
+	transition: margin-bottom 0.05s;
+
 }
 
 .button .middle{
@@ -38,6 +40,7 @@ body {
 	height: 50px;
 	position: absolute;
 	background: #F26365;
+	transition: height 0.05s;
 }
 
 .button .bottom {
@@ -46,5 +49,5 @@ body {
 	background: #F26365;
 	position: absolute;
 	border-radius: 50%;
-	margin-top: 50px;
+	margin-bottom: -50px;
 }

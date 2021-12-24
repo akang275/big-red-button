@@ -34,16 +34,16 @@
 		button.onclick = function() {
 			counter += 1;
 			let id = counter;
-			middle.style.visibility = 'hidden';
+			middle.style.height = '0px';
 			top_.style.marginBottom = '-50px';
 			playAudio();
 
 			let timer = setTimeout(function() {
 				if (id === counter) {
-					middle.style.visibility = 'visible';
-					top_.style.marginBottom = '50px';
+					middle.style.height = '50px';
+					top_.style.marginBottom = '0px';
 				}
-			}, 400);
+			}, 300);
 		}
 	</script>
 </body>
